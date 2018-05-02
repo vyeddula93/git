@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style = "font-family:Arial">
+<ul>
+   <li>INDIA</li>
+   <li>US</li>
+   <li>UK</li>
+   <li>CANADA</li>
+   <li>AUSTRALIA</li>
+</ul>
+<div id = "result"></div>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+   $(document).ready(function() {
+       $('li')
+              .css('color', 'blue')
+              .text('MY VALUE')
+              .slideUp(1000)
+              .slideDown(1000)
+              .attr('title','MY TITLE');
+   });
+</script>
+</body>
+</html>

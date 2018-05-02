@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style = "font-family:Arial">
+<ul>
+   <li>INDIA</li>
+   <li>US</li>
+   <li>UK</li>
+   <li>CANADA</li>
+   <li>AUSTRALIA</li>
+</ul>
+<div id = "result"></div>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+   $(document).ready(function() {
+
+	   var divResult = ''; 
+	   $('li').each(function() {
+		   result +=  '<br>'+ $(this).text();
+	   });
+	   $('#result').html(result);
+   });
+</script>
+</body>
+</html>

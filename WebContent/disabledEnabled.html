@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>First Name:</td>
+    <td><input type = "text" name = "first" disabled="disabled"></td>
+  </tr>
+    <tr>
+    <td>Last Name:</td>
+    <td><input type = "text" name = "last" disabled="disabled"></td>
+  </tr>
+    <tr>
+    <td>Email:</td>
+    <td><input type = "text" name = "email"></td>
+  </tr>
+    <tr>
+    <td>Gender:</td>
+    <td>
+    <select disabled="disabled">
+  <option value = "male">MALE</option>
+  <option value = "female">FEMALE</option>
+</select>  </td>
+  </tr>
+    <tr>
+    <td> Comments: </td>
+    <td>  <textarea rows = "5" cols = "55">
+    Hey! You will achieve your dreams </textarea></td>
+  </tr>
+    <tr>
+    <td><input type = "submit" value = "submit" disabled="disabled"></td>
+  </tr>
+</table>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript"> 
+  $(document).ready(function() {
+	  $('textarea:enabled').css('border','3px solid red');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Gender:
+<input type = "checkbox" name = "gender" value = "female"/> Female
+<input type = "checkbox" name = "gender" value = "male"/> Male
+<input type = "checkbox" name = "gender" value = "Lesbian"/> Lesbian
+<input type = "checkbox" name = "gender" value = "Gay"/> Gay
+<br><br>
+<input id = "btnSubmit" type = "submit" value = "SUBMIT" />
+<div id = "divResult"></div>
+<script src = "jquery-2.x-git.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+	 $('#btnSubmit').click(function() {
+		 var result = $('input[type = "checkbox"]:checked');
+		 if(result.length > 0) {
+			 var resultString = result.length + " checkboxes checked<br>" 
+			 
+			 result.each(function() {
+				 resultString += $(this).val() + "<br/>"
+			 });
+			 $('#divResult').html(resultString);
+		 }
+		 else {
+			 $('#divResult').html( "No radio button is checked");
+		 }
+	 });
+ });
+</script>
+</body>
+</html>

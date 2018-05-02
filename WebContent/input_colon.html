@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+First Name: <input type = "text" value = "John" /><br><br>
+Last Name: <input type = 'text' value = "Major" /><br><br>
+Gender:
+<input type = "radio" name = "gender" checked = "checked" value = "Male">Male
+<input type = "radio" name = "gender" value = "female">Female
+<br><br>
+Skills:
+<input type = "checkbox" name = "skills" checked = "checked" value = "JavaScript" />JavaScript
+<input type = "checkbox" name = "skills" checked = "checked" value = "jQuery" /> jQuery
+<input type = "checkbox" name = "skills" value = "C#">C#
+<br /><br>
+Country:
+<select>
+  <option selected = "selected" value = "USA"> USA </option>
+  <option value = "INDIA"> INDIA</option>
+  <option value = "UK"> UK </option>
+</select>
+<br><br>
+Summary:
+<br>
+<textarea rows="5" cols="50">Hey I am the best programmer</textarea>
+<br>
+<input type = "submit" value = "submit" />
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+  $(document).ready(function() {
+	  $('input[type = "text"]').each(function () {
+		  alert($(this).val());
+	  });
+  });
+</script>
+</body>
+</html>

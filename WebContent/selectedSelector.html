@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "jquery-2.x-git.js"></script>
+<script type= "text/javascript">
+ $(document).ready(function() {
+	 $('#selectCountries').change(function() {
+		var selectedOptions =  $('#selectCountries option:selected');
+		if(selectedOptions.length >0) {
+			var resultString = '';
+			selectedOptions.each(function() {
+				resultString += "Value: " + $(this).val() +
+		         " <br> Text: " + $(this).text() + "<br>";
+			});
+			$('#divResult').html(resultString);
+		}
+	 });
+ });
+</script>
+</head>
+<body style = "font-family:Arial">
+  Country:
+  <select id = "selectCountries" multiple = "multiple">
+     <option value=  "USA">UNITED STATES OF AMERICA</option>
+     <option value=  "India">INDIA</option>
+     <option value=  "Sweden">SWEDEN</option>
+     <option value=  "Netherlands">NETHERLANDS</option>
+  </select>
+  <br><br>
+  <div id = "divResult"></div>
+</body>
+</html>

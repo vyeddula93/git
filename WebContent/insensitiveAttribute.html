@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link type = "text/css" href = "jQuery.css" rel = "stylesheet">
+</head>
+<body>
+<div title = "DivTitle1"> DIV1 </div>
+<div title = "DIVTITLE2"> DIV2 </div>
+<div title = "divtitle3"> DIV3 </div>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+  $(document).ready(function() {
+	  $('div[title]').filter(function() {
+		  return (/Div/i).test($(this).attr('title'));
+	  }).css('border','3px solid red');
+  });//flag i says the comparision has to be case insensitive
+</script>
+</body>
+</html>

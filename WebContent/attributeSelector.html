@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel = "stylesheet" type = "type/css" href = "jQery.css">
+</head>
+<body>
+ <!--  <div title ="div1Title">
+   This is a Div1 element
+ </div>
+ <div title ="div2Title">
+   This is a Div2 element
+ </div>
+ <p title ="pTitle">
+   This is a Paragraph honey
+ </p>
+ <span title ="div1Title">
+   This is a Span element
+ </span>
+ <br><br>
+ <span>
+   Span element Again
+ </span> -->
+ <div title="divTitle" style = "background-color:red">
+    RED DIV
+ </div>
+ <br/>
+ <div title="divTitle" style = "background-color:green">
+    GREEN DIV
+ </div>
+ <br/>
+ <div title="divTitle">
+    RED DIV
+ </div>
+ <div>
+   NORMAL DIV WITHOUT ANY ATTRIBUTES
+ </div>
+<script src = "jquery-2.x-git.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+	 //$('div[title]').css('border','5px solid red');
+	 //$('[title = "div1Title"]').css('border','5px solid red');
+	 //$('div[title = "div1Title"]').css('border','5px solid red');
+	 $('div[title = "divTitle"][style = "background-color:green"]').css('border','5px solid black');
+ });
+</script>
+</body>
+</html>

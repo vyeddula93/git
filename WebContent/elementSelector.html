@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel = "stylesheet" type = "text/css" href = "jQuery.css">
+</head>
+<body>
+  <table id = 'table1'>
+    <tbody>
+      <tr>
+        <td>C#</td>
+        <td>ASP.NET</td>
+        <td>SQL SERVER</td>
+      </tr>
+      <tr>
+        <td>ADO.NET</td>
+        <td>jQuery</td>
+        <td>JavaScript</td>
+      </tr>
+      <tr>
+        <td>AJAX</td>
+        <td>CSS</td>
+        <td>HTML</td>
+      </tr>
+      <tr>
+        <td>VB</td>
+        <td>.NET</td>
+        <td>VisualStudios</td>
+      </tr>
+      <tr>
+        <td>Oracle</td>
+        <td>Java</td>
+        <td>J2EE</td>
+      </tr>
+    </tbody>
+  </table>
+  <table id = 'table2'>
+    <tbody>
+      <tr>
+        <td>Dream1</td>
+        <td>Bring sister to grad party</td>
+        <td>Kent State University</td>
+      </tr>
+      <tr>
+        <td>Dream2</td>
+        <td>Best Programmer at office</td>
+        <td>Nationwide Insurance</td>
+      </tr>
+      <tr>
+        <td>Dream3</td>
+        <td>Tatto on my back</td>
+        <td>Vijayalakshmi Yeddula</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    DIV ELEMENT
+    <br/>
+    <a href = "https://www.w3schools.com/css/css_howto.asp"> W3 SCHOOLS</a>
+  </div>
+  <div>
+    SPAN ELEMENT : <span> Hey I am a span element</span>
+    <br/>
+  </div>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+  $(document).ready(function() {
+	  alert($('td').length); //$('td') - take the collection
+	  $('#table1 td:even').css('background-color','cyan');
+	  $('#table2 td:odd').css('background-color','yellow');
+	 // alert($('table').html());//to alert the entire html content of table element
+	 // $('table tr').each( function() {
+	//	  alert($(this).html());
+	//  });
+	  $('div a').css('background-color', 'green');
+  });
+</script>
+</body>
+</html>

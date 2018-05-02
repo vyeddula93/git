@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "jquery-2.x-git.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+	  var employeeJson = {
+			 "Todd": {
+			  "firstName" : "Todd",
+	          "lastName" : "Grover",
+	          "gender" : "Male",
+	          "salary" : 50000
+	  },
+	         "Vijaya" :{
+		  "firstName" : "Vijaya",
+          "lastName" : "Lakshmi",
+          "gender" : "female",
+          "salary" : 90000
+	  }
+  };
+	  var result = "";
+	  result += 'First Name =' + employeeJson.firstName + '<br/>';
+	  result += 'Last Name =' + employeeJson.lastName + '<br/>';
+	  result += 'Gender =' + employeeJson.gender + '<br/>';
+	  result += 'Salary =' + employeeJson.salary + '<br/>';
+	  
+	  $('#divResult').html(employeeJson.Todd.firstName);
+  });
+</script>
+</head>
+<body>
+<div id = "divResult"></div>
+</body>
+</html>
