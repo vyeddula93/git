@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+  $(document).ready(function() {
+	  var config = {
+			  'title': 'New Div Title',
+			  'style' : 'border:3px solid red',
+			  'name' : 'My Div'
+	  };
+	  $('div').attr(config);
+	  
+	  var result = '';
+	  $('div').each(function() {
+		  result += 'title =' + $(this).attr('title') + '<br>';
+		  result += 'style =' + $(this).attr('style') + '<br>';
+		  result += 'name =' + $(this).attr('name') + '<br>';
+	  })
+	  $('#resultSpan').html(result);
+	
+  });
+</script>
+</head>
+<body>
+  <div id = "div1" title = "My DIV1">
+     DIV 1
+  </div>
+  <div id = "div2" title = "My DIV2">
+    DIV 2
+  </div>
+  <br>
+  <br>
+  <span id = "resultSpan"></span>
+</body>
+</html>

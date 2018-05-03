@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+  .containerDiv
+  {
+     background-color:red;
+     color:white;
+     font-weight:bold;
+     margin:3px;
+  }
+</style>
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+  $(document).ready(function() {
+	  $('div').wrapInner('<div class = "containerDiv"></div>');
+      $('div').unwrap();
+  });
+</script>
+</head>
+<body style = "font-family:Arial">
+  <div id = "div1" >
+     DIV 1
+  </div>
+  <div id = "div2" >
+    DIV 2
+  </div>
+  <div id = "div3" >
+    DIV 3
+  </div>
+  <br>
+  <br>
+  <span id = "resultSpan"></span>
+</body>
+</html>
