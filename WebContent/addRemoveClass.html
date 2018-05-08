@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+   .boldClass {
+       font-wieght: bold;
+   }
+   .italicsClass {
+       font-style: italic;
+   }
+   .colorClass {
+       color: red;
+   }
+</style>
+
+<script src = "jquery-2.x-git.js"></script>
+<script type = "text/javascript">
+  $(document).ready(function() {
+	  $("#btn1").click(function() {
+		     $('h1').addClass('colorClass'); 
+	  });
+	  
+	  $("#btn2").click(function() {
+			 $('h1').removeClass('colorClass'); 
+	  });
+	  
+	  $("#btn3").click(function() {
+			 $('h1').addClass('colorClass italicsClass'); 
+	  });
+		  
+	  $("#btn4").click(function() {
+		     $('h1').removeClass('colorClass italicsClass'); 
+	  });
+		  
+	  $("#btn5").click(function() {
+			 $('h1').addClass('colorClass italicsClass boldClass'); 
+	  });
+			  
+	  $("#btn6").click(function() {
+			 $('h1').removeClass(); 
+	  });
+	  $("#btn7").click(function() {
+			 $('h1').toggleClass('colorClass italicsClass boldClass'); 
+	  });
+  });
+</script>
+</head>
+<body>
+<h1>Vijayalakshmi Yeddula - The Best Programmer</h1>
+<table>
+  <tbody>
+    <tr>
+      <td>
+         <input id="btn1" style="width:250px" type="button"
+                value="Add Color Class"/>
+      </td>
+      <td>
+         <input id="btn2" style="width:250px" type="button"
+                value = "Remove Color Class"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+         <input id="btn3" style="width:250px" type="button"
+                value="Add Color and Italics Classes"/>
+      </td>
+      <td>
+         <input id="btn4" style="width:250px" type="button"
+                value = "Remove Color and Italics Classes"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+         <input id="btn5" style="width:250px" type="button"
+                value="Add Color,Italics & Bold Classes"/>
+      </td>
+      <td>
+         <input id="btn6" style="width:250px" type="button"
+                value = "Remove Color,Italics & Bold Classes"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+         <input id="btn7" style="width:250px" type="button"
+                value="Toggle Classes"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

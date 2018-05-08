@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "jquery-2.x-git.js"></script>
+<script type="text/javascript">
+  $(document).ready( function() {
+	  var intArray = [100, 200, 300, 400, 500];
+	  var jsObject = {
+			'USA': 'Washington D.C', //key and value
+			'India': 'New Delhi',
+			'UK': 'London' ,
+			'Austraila' : 'Canberra'
+	  };
+	  var result = "";
+	 $.each(intArray, function(index,element) {
+		 result += 'Index = ' + index + 'Value: ' + element + "<br/>";
+	 });
+	  $("#resultDiv").html(result);
+	  var result1 = "";
+	  $.each(jsObject, function(key,element) {
+			 result1 += 'Key = ' + key + 'Value: ' + element + "<br/>";
+		 });
+		  $("#resultDiv1").html(result1);
+  });
+</script>
+</head>
+<body>
+  <ul>
+     <li>US</li>
+     <li>India</li>
+     <li>UK</li>
+     <li>Canada</li>
+     <li>Australia</li>
+  </ul>
+  <div id = "resultDiv"></div>
+  <div id = "resultDiv1"></div>
+</body>
+</html>

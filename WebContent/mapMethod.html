@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "jquery-2.x-git.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+	  var result = [];
+	  var result1 = '';
+	  $('li').each(function(index,element) { //each method
+		  result.push($(element).text());
+	  });
+	  
+	  alert(result);
+	  
+	  alert($('li').map(function(index,element) { //map method
+		  return $(element).text();
+	  }).get());
+	  
+	  $('li').each(function(index,element) { //each pipe method
+		  result1 += $(element).text() +'|';
+	  });
+	  
+	  result1 = result1.substr(0, result1.length - 1);
+	  alert(result1);
+	  
+	  
+	  alert($('li').map(function(index,element) { //map pipe method
+		  return $(element).text();
+	  }).get().join('|'));
+  });
+</script>
+</head>
+<body>
+ <ul>
+   <li>US</li>
+   <li>INDIA</li>
+   <li>UK</li>
+   <li>CANADA</li>
+   <li>AUSTRALIA</li>
+ </ul>
+</body>
+</html>
